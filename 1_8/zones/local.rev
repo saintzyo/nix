@@ -1,0 +1,9 @@
+$ttl 38400
+@	IN	SOA	gentoo. admin.example.int. (
+2016083001 ; serial
+108000 ; refresh
+1800 ; retry
+1209600 ; expire
+604800)
+
+@			IN	NS	gentoo.

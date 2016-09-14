@@ -1,0 +1,3 @@
+mysqldump -u root -p$localpass --opt --databases testbase > word_dump
+scp word_dump user@testserver:/home/zyo/
+ssh user@testserver 'mysql -u root -p$remotepass < word_dump'

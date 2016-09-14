@@ -1,0 +1,15 @@
+#!/usr/bin/expect
+spawn telnet localhost 25
+expect "220"
+send "helo host\r"
+expect "250"
+send "mail from: test1@example.int\r"
+expect "250"
+send "rcpt to: test2@example.int\r"
+expect "250"
+send "data\r"
+expect "354"
+send "Test message from cli.\r"
+send ".\r"
+expect "250"
+send "quit"

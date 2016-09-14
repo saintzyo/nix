@@ -1,0 +1,2 @@
+mysqldump -u root -p$localpass testbase > dump
+ssh user@testserver 'mysql -u root -p$remotepass testbase < dump'
